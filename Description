@@ -1,0 +1,90 @@
+# Predict-the-claim-of-Travel-Insurance-using-Decision-Tree-Algorithm-In-Python.
+PREDICT THE CLAIM OF TRAVEL INSURANCE WHICH IS BASED ON THIRD PARTY SERVICING COMPANY LOCATED IN SINGAPORE USING DECISION TREE ALGORITHM IN PYTHON. Decision tree is one of the most popular machine learning algorithms used all among, this story I wanna talk about it so let’s get started!!
+We have couple of other algorithms there, so why do we have to choose decision tree?
+Well, there might be many reasons but I believe a few which are-
+1.	Decision trees often mimic the human level thinking so its so simple to understand the data and make some good interpretations.
+2.	Decision trees actually  make you see the logic for the data to interpret.
+Decision trees provide an effective method of decision making because they clearly lay out the problems so that all options can be challenged . Allow us to analyze fully the possible consequences of a decision. Provide a framework to quantify the values of outcomes and the probabilities of achieving them.
+ 
+DESCRIPTION- A third-party travel insurance servicing company that is based in Singapore .
+The attributes-
+1.	Target: claim status (Claim.status)
+2.	Name of agency(Agency)
+3.	Type of travel insurance agencies (Agency.Type)
+4.	Distribution channel of travel insurance agencies (Distribution.channel)
+5.	Name of the travel insurance products (Product.name)
+6.	Duration of travel (duration)
+7.	Destination of travel (Destination)
+8.	Amount of sales of travel insurance policies (Net.sales)
+9.	Commission received for travel insurance agency (commission)
+10.	Gender of insured (Gender)
+11.	Age of insured (Age)
+COLUMNS- 
+1.	Agency
+2.	Agency type
+3.	Distribution channel
+4.	Product name
+5.	Claim
+6.	Duration
+7.	Destination
+8.	Net sales
+9.	Commission (in value)
+10.	Gender
+11.	age
+We have taken the sample of 50 peoples travel insurance which is based on third party located in Singapore to predict our decision model
+RESOURCES- kaggle.com
+DATA REFERENCE-   travel insurance is an insurance product for covering unforeseen losses incurred while travelling, either internationally or domestically. Basic policies generally only cover emergency medical  expenses while overseas, while comprehensive policies typically include coverages for trip cancellation, lost luggage,flights delays, public liability ,and other expenses.
+Agency	Agency Type	Distribution Channel	Product Name	Duration	Destination	Net Sales	Commision (in value)	Gender	AGE	Claim
+CBH	Travel Agency	Offline	Comprehensive Plan	186	MALAYSIA	-29	9.57	F	81	0
+CBH	Travel Agency	Offline	Comprehensive Plan	186	MALAYSIA	-29	9.57	F	71	0
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	65	AUSTRALIA	-49.5	29.7	M	32	0
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	60	AUSTRALIA	-39.6	23.76	F	32	0
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	79	ITALY	-19.8	11.88	F	41	0
+JZI	Airlines	Online	Value Plan	66	UNITED STATES	-121	42.35	F	44	0
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	47	UNITED STATES	-39.6	23.76	M	32	0
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	63	AUSTRALIA	-108.9	65.34	M	29	0
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	57	THAILAND	-19.8	11.88	F	44	0
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	186	AUSTRALIA	-99	59.4	M	37	0
+JZI	Airlines	Online	Basic Plan	33	KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF	-26	9.1	M	78	0
+JZI	Airlines	Online	Basic Plan	1	MALAYSIA	-18	6.3	M	47	0
+KML	Travel Agency	Online	Premier Plan	53	NORWAY	-130	49.4	F	48	0
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	5	MALAYSIA	-39.6	23.76	M	64	0
+EPX	Travel Agency	Online	2 way Comprehensive Plan	39	VIET NAM	-25	0	M	36	0
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	6	DENMARK	-19.8	11.88	F	53	0
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	48	DENMARK	-79.2	47.52	F	43	0
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	11	UNITED STATES	-29.7	17.82	F	58	1
+JZI	Airlines	Online	Basic Plan	3	MALAYSIA	-18	6.3	F	47	1
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	14	THAILAND	-69.3	41.58	M	37	0
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	136	NORWAY	-108.9	65.34	F	32	1
+C2B	Airlines	Online	Bronze Plan	12	SINGAPORE	46.15	11.54	F	44	1
+C2B	Airlines	Online	Bronze Plan	7	SINGAPORE	17.55	4.39	F	25	0
+C2B	Airlines	Online	Bronze Plan	12	SINGAPORE	94	23.5	M	34	1
+C2B	Airlines	Online	Silver Plan	190	SINGAPORE	294.75	73.69	M	26	0
+C2B	Airlines	Online	Annual Silver Plan	364	SINGAPORE	389	97.25	F	30	1
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	29	UNITED STATES	9.9	5.94	M	33	1
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	28	UNITED STATES	9.9	5.94	F	33	0
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	153	JAPAN	69.3	41.58	M	35	0
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	28	UNITED KINGDOM	19.8	11.88	F	31	0
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	4	UNITED KINGDOM	29.7	17.82	M	61	0
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	54	AUSTRALIA	0	41.58	M	31	0
+CWT	Travel Agency	Online	Rental Vehicle Excess Insurance	24	AUSTRALIA	89.1	53.46	M	33	0
+EPX	Travel Agency	Online	2 way Comprehensive Plan	9	INDONESIA	25	0	M	36	0
+EPX	Travel Agency	Online	2 way Comprehensive Plan	12	MALAYSIA	24	0	M	36	0
+EPX	Travel Agency	Online	2 way Comprehensive Plan	45	MALAYSIA	20	0	F	36	1
+EPX	Travel Agency	Online	2 way Comprehensive Plan	35	INDIA	27	0	M	36	1
+EPX	Travel Agency	Online	2 way Comprehensive Plan	28	THAILAND	20	0	F	44	1
+EPX	Travel Agency	Online	2 way Comprehensive Plan	24	CHINA	43	0	F	36	1
+EPX	Travel Agency	Online	2 way Comprehensive Plan	8	FRANCE	78	0	F	36	1
+EPX	Travel Agency	Online	2 way Comprehensive Plan	183	INDONESIA	20	0	F	36	0
+EPX	Travel Agency	Online	2 way Comprehensive Plan	36	TAIWAN, PROVINCE OF CHINA	22	0	F	20	0
+EPX	Travel Agency	Online	2 way Comprehensive Plan	3	VIET NAM	27	0	F	46	0
+EPX	Travel Agency	Online	2 way Comprehensive Plan	38	SINGAPORE	41	0	F	36	0
+EPX	Travel Agency	Online	2 way Comprehensive Plan	36	UNITED STATES	95	0	F	49	0
+EPX	Travel Agency	Online	2 way Comprehensive Plan	4	THAILAND	20	0	M	50	1
+EPX	Travel Agency	Online	2 way Comprehensive Plan	3	MALAYSIA	20	0	F	36	0
+EPX	Travel Agency	Online	2 way Comprehensive Plan	13	THAILAND	35	0	F	36	0
+EPX	Travel Agency	Online	2 way Comprehensive Plan	11	PHILIPPINES	43	0	F	36	1
+
+
+
+
